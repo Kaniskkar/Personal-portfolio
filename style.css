@@ -1,0 +1,155 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  
+}
+
+html{
+  font-size: 70%;
+}
+body{
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+.Home{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  overflow: hidden;
+  min-height: 100vh;
+  background: linear-gradient(to right, rgb(6, 6, 45), rgb(6, 6, 45));
+}
+header{
+  position: fixed;
+  font-size: 1.5em;
+  top: 0;
+  left: 0;
+  z-index: 99;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  color: white;
+  justify-content: space-between;
+  padding: 5rem 9rem;
+}
+header nav a{
+  text-decoration: none;
+  color: aliceblue;
+  margin-left: 4rem;
+  transition: .3s;
+  
+}
+header nav a:hover,
+header nav .active{
+  color: skyblue;
+  position: relative;
+}
+.contBox{
+  
+  width: 50%;
+  display: flex;
+  align-items: center;
+  margin-left: 0rem;
+  z-index: 3;
+}
+.text{
+  color: white;
+  
+}
+
+.iconBox{
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+  margin-right: 4rem;
+}
+.contBox .iconBox i{
+  box-sizing: border-box;
+  color: skyblue;
+  padding: .6rem;
+  font-size: 2rem;
+  border: .2rem solid skyblue;
+  border-radius: 50%;
+  transition: .2s;
+}
+.contBox .iconBox i:hover{
+  color: white;
+  background-color: skyblue;
+  box-shadow: 0 0 1.5rem skyblue;
+  cursor: pointer;
+}
+.text h1{
+  font-size: 3.1rem;
+  font-weight: 300;
+}
+.text p{
+  margin: 2.5rem 0;
+  font-size: 1.4rem;
+  word-spacing: 0.5mm;
+  line-height: 2rem;
+}
+.contBox{
+  --colr:blue, hsl(240, 98%, 66%),hsl(240, 100%, 50%),hsl(240, 100%, 50%),hsl(240, 92%, 76%),blue;
+  padding: 8rem 3rem;
+  max-width: 75%;
+  border-left: 0;
+  border: 3px solid transparent;
+  border-left: 0vh;
+  border-radius: 0 100vh 100vh 0;
+  background: linear-gradient( rgb(6, 6, 45) 0 0) padding-box,
+  conic-gradient(var(--colr)) border-box; 
+  position: relative;
+  isolation: isolate;
+}
+.contBox::before,
+.contBox::after{
+  content: '';
+  position: absolute;
+  border-radius: inherit;
+}
+.contBox::before{
+  
+  background:  rgb(6, 6, 45);
+  border-radius: 0 100vh 100vh 0;
+  z-index: -1;
+  inset: 3rem;
+  filter: blur(3rem);
+  left: 0;
+  scale: 1.2rem;
+  border-left: 0vh;
+  
+  
+}
+.contBox::after{
+  z-index: -2;
+  inset: -2rem;
+  background: conic-gradient(var(--colr));
+  filter: blur(5rem);
+
+}
+img{
+  width: 25%;
+  margin-right: 10rem;
+  align-items: center;
+  align-content: center;
+  border-radius: 50%;
+  border: 5px solid white;
+  background-color: skyblue;
+  position: relative;
+  box-shadow: 0 0 5rem hsl(240, 100%, 50%);
+  transform: scale(1);
+  transition: .4s ease-in;
+}
+img:hover{
+  transform: scale(1.1);
+  transition: 3s;
+  
+}
+@keyframes imgg {
+  100%{
+    scale: 1;
+    
+  }
+}
